@@ -26,8 +26,8 @@ public class MoveTest : MonoBehaviour {
         {
             float horizontalMove = Input.GetAxis("Horizontal");
             transform.Rotate(0, horizontalMove * deltaTime * RotateAngle, 0);
-            transform.FindChild("Truck").Rotate(0, horizontalMove * deltaTime * RotateAngle, 0);
-            transform.FindChild("Main Camera").Rotate(0, horizontalMove * deltaTime * RotateAngle, 0);
+            transform.FindChild("TruckTrans").Rotate(0, horizontalMove * deltaTime * RotateAngle, 0);
+            //transform.FindChild("Main Camera").Rotate(0, horizontalMove * deltaTime * RotateAngle, 0);
         }
 
 	}
