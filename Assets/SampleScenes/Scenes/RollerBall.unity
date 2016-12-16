@@ -33,7 +33,7 @@ RenderSettings:
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 256
-  m_ReflectionBounces: 1
+  m_ReflectionBounces: 2
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
@@ -166,6 +166,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &79765590
 Transform:
   m_ObjectHideFlags: 0
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &122446291
 MonoBehaviour:
@@ -462,7 +464,7 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   m_MoveSpeed: 20
-  m_TurnSpeed: 10
+  m_TurnSpeed: 2.75
   m_TurnSmoothing: 0
   m_TiltMax: 75
   m_TiltMin: 45
@@ -567,7 +569,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d86e6c6b9ce74f9ab00b6c214035130, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1191367094
+--- !u!4 &1191367094 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 9d86e6c6b9ce74f9ab00b6c214035130, type: 2}
   m_PrefabInternal: {fileID: 1191367093}
@@ -613,7 +615,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95bbe2885334e3c46b79c3419edb469c, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1220512697
+--- !u!4 &1220512697 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 95bbe2885334e3c46b79c3419edb469c, type: 2}
   m_PrefabInternal: {fileID: 1220512696}
@@ -916,7 +918,7 @@ MonoBehaviour:
   m_MovePower: 5
   m_UseTorque: 1
   m_MaxAngularVelocity: 25
-  m_JumpPower: 4
+  m_JumpPower: 1.5
 --- !u!54 &2061790546
 Rigidbody:
   m_ObjectHideFlags: 0
