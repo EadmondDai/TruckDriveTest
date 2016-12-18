@@ -50,7 +50,7 @@ static public class TrafficSystemGameUtils
 				break;
 			case TrafficSystemGameUtils.GameObjectItem.NAV_MESH_AGENT:
 			{
-				if(a_obj.GetComponent<NavMeshAgent>())
+				if(a_obj.GetComponent<UnityEngine.AI.NavMeshAgent>())
 					a_returnObj = a_obj;
 			}
 				break;
@@ -118,7 +118,7 @@ static public class TrafficSystemGameUtils
 				break;
 			case TrafficSystemGameUtils.GameObjectItem.NAV_MESH_AGENT:
 			{
-				if(a_obj.GetComponent<NavMeshAgent>())
+				if(a_obj.GetComponent<UnityEngine.AI.NavMeshAgent>())
 					a_returnObj = a_obj;
 			}
 				break;
