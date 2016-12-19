@@ -41,12 +41,12 @@ public class CameraPosChange : MonoBehaviour {
 
         if (Input.GetButtonDown("CameraLeft"))
         {
-            transform.Translate(DeltaDistance, 0, 0);
+            transform.Translate(-DeltaDistance, 0, 0);
         }
 
         if (Input.GetButtonDown("CameraRight"))
         {
-            transform.Translate(-DeltaDistance, 0, 0);
+            transform.Translate(DeltaDistance, 0, 0);
         }
     }
 }

@@ -338,8 +338,8 @@ namespace HTC.UnityPlugin.StereoRendering
             if (canvasVisible)
             {
                 // disable specified objects
-                for (int i = 0; i < ignoreWhenRender.Count; i++)
-                    ignoreWhenRender[i].SetActive(false);
+                //for (int i = 0; i < ignoreWhenRender.Count; i++)
+                    //ignoreWhenRender[i].SetActive(false);
 
                 // invert backface culling when rendering a mirror
                 if (isMirror)
@@ -357,8 +357,8 @@ namespace HTC.UnityPlugin.StereoRendering
                     GL.invertCulling = false;
 
                 // re-activate specified objects
-                for (int i = 0; i < ignoreWhenRender.Count; i++)
-                    ignoreWhenRender[i].SetActive(true);
+                //for (int i = 0; i < ignoreWhenRender.Count; i++)
+                //    ignoreWhenRender[i].SetActive(true);
 
                 // finish this render pass, reset visibility
                 canvasVisible = false;
