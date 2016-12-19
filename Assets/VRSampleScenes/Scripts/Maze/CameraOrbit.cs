@@ -76,6 +76,7 @@ namespace VRStandardAssets.Maze
         private IEnumerator RotateCamera(float increment)
         {
             // Determine how the camera should rotate base on it's orbit style.
+            m_OrbitStyle = OrbitStyle.Step;
             switch (m_OrbitStyle)
             {
                 // If the style is smooth add a torque to the camera's rigidbody.

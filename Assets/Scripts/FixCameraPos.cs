@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
 
 //© by Eadmond, 12.17.2016
 // This script should bind the VR head position to a point I desired.
@@ -16,6 +17,6 @@ public class FixCameraPos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //transform.position = CameraPosTrans.position;
+         transform.localPosition = CameraPosTrans.localPosition;
 	}
 }
