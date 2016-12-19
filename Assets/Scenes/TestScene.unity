@@ -556,6 +556,11 @@ Prefab:
       propertyPath: m_SuspensionSpring.damper
       value: 2287.9536
       objectReference: {fileID: 0}
+    - target: {fileID: 114378669371012360, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: maxTorque
+      value: 2250.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
