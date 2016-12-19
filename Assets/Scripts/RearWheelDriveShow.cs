@@ -14,10 +14,6 @@ public class RearWheelDriveShow : MonoBehaviour {
 	public float maxTorque = 300;
     public Transform CarModel;
 
-    public float MoveSpeed = 10;
-    public float ReverseSpeed = 10;
-    public float RotateAngle = 10;
-
     // here we find all the WheelColliders down in the hierarchy
     void Start()
 	{
