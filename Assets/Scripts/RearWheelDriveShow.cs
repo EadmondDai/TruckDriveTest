@@ -20,6 +20,8 @@ public class RearWheelDriveShow : MonoBehaviour {
 	public float maxTorque = 300;
     public Transform CarModel;
 
+    public float FrictionRate = 0.7f;
+
     public float AccelerateRate;
     public float BrakeRate;
     public float ReverseRate;
@@ -53,43 +55,26 @@ public class RearWheelDriveShow : MonoBehaviour {
             //Debug.Log(" lrz : " + rec.lRz.ToString() + " minus :" + minusVertical.ToString());
 
             float angle = maxAngle * horizontalMove * deltaTime;
-            float torque = maxTorque * (verticalMove - minusVertical) * deltaTime; 
+            float torque = maxTorque * (verticalMove - minusVertical) * deltaTime;
+
+            OnAccel(verticalMove, 0);
+            OnTurn(horizontalMove * deltaTime);
+            OnBrake(-(rec.lRz - 32767) / 10000);
+            OnReverse(-(rec.lRz - 32767) / 10000, 0);
 
             // Temp method for testing.
-            if(Input.GetAxis("Vertical") !=0)
+            if (Input.GetAxis("Vertical") !=0)
             {
-                torque = maxTorque * Input.GetAxis("Vertical");
+                AccelerateRate = maxTorque * Input.GetAxis("Vertical");
+                
             }
 
             if(Input.GetAxis("Horizontal") != 0)
             {
-                angle = maxAngle * Input.GetAxis("Horizontal");
+                TurnRate = maxAngle * Input.GetAxis("Horizontal"); 
             }
 
-            foreach (WheelCollider wheel in wheels)
-            {
-                // a simple car where front wheels steer while rear ones drive
-                if (wheel.transform.localPosition.z > 0)
-                    wheel.steerAngle = angle;
-
-                if (wheel.transform.localPosition.z < 0)
-                    wheel.motorTorque = torque;
-
-                // update visual wheels if any
-                {
-                    Quaternion q;
-                    Vector3 p;
-                    wheel.GetWorldPose(out p, out q);
-
-                    // assume that the only child of the wheelcollider is the wheel shape
-                    Transform shapeTransform = CarModel.FindChild(wheel.name);
-                    shapeTransform.position = p;
-                    shapeTransform.rotation = q;
-                }
-
-            }
         }
-
         else if (!LogitechGSDK.LogiIsConnected(0))
         {
             Debug.Log("PLEASE PLUG IN A STEERING WHEEL OR A FORCE FEEDBACK CONTROLLER");
@@ -99,6 +84,37 @@ public class RearWheelDriveShow : MonoBehaviour {
             Debug.Log("THIS WINDOW NEEDS TO BE IN FOREGROUND IN ORDER FOR THE SDK TO WORK PROPERLY");
         }
 	}
+
+
+
+    void FixedUpdate()
+    {
+        foreach (WheelCollider wheel in wheels)
+        {
+            // a simple car where front wheels steer while rear ones drive
+            if (wheel.transform.localPosition.z > 0)
+                wheel.steerAngle = TurnRate;
+
+            if (wheel.transform.localPosition.z < 0)
+                wheel.motorTorque = AccelerateRate * maxTorque;
+
+            // Handle break and reverse.
+
+            // update visual wheels if any
+            {
+                Quaternion q;
+                Vector3 p;
+                wheel.GetWorldPose(out p, out q);
+
+                // assume that the only child of the wheelcollider is the wheel shape
+                Transform shapeTransform = CarModel.FindChild(wheel.name);
+                shapeTransform.position = p;
+                shapeTransform.rotation = q;
+            }
+
+        }
+    }
+
 
     // Controll realated to truck.
     // pedal [ 0 ~ 1];
@@ -110,18 +126,18 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     public void OnBrake(float pedal)
     {
-
+        BrakeRate = pedal;
     }
 
     public void OnReverse(float pedal, int shift)
     {
-
+        ReverseRate = pedal;
     }
 
-    // angle should be -1 ~ 1. -1 means most left, 1 means most right.
+    // angle.  Negative means turn left, positive means turn right.
     public void OnTurn(float angle)
     {
-
+        TurnRate = angle;
     }
 
 }
