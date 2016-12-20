@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 114378669371012360}
   - component: {fileID: 114926929119254840}
   - component: {fileID: 114941134946293082}
+  - component: {fileID: 114139282997025394}
   m_Layer: 0
   m_Name: T600
   m_TagString: Untagged
@@ -663,7 +664,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374862452248668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.03, z: -1.488}
+  m_LocalPosition: {x: 1.86, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4829498050258554}
@@ -766,14 +767,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1309735572295488}
-  m_LocalRotation: {x: -0, y: -0.15973592, z: -0, w: 0.9871598}
-  m_LocalPosition: {x: 0.0034000278, y: -0.01699996, z: -0.013299942}
+  m_LocalRotation: {x: -0, y: -0.12534033, z: -0, w: 0.9921138}
+  m_LocalPosition: {x: 0.0033999681, y: -0.01699996, z: -0.013299942}
   m_LocalScale: {x: 0.116463624, y: 0.39999443, z: -0.3446308}
   m_Children:
   - {fileID: 4126303422586932}
   m_Father: {fileID: 4295386543834820}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -18.383001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -14.401001, z: 0}
 --- !u!4 &4606880493232378
 Transform:
   m_ObjectHideFlags: 1
@@ -1570,6 +1571,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114139282997025394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374862452248668}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79bb9371a024094ebb46ab9c3a9c556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114250346417121426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1636,10 +1648,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasOrigin: {fileID: 0}
-  m_canvasOriginWorldPosition: {x: 0.89706075, y: 1.7981629, z: -0.26025528}
+  m_canvasOriginWorldPosition: {x: 2.9565508, y: 1.8581, z: 0.7979413}
   m_canvasOriginWorldRotation: {x: 270.31152, y: 321.57166, z: 40.970303}
   anchorTransform: {fileID: 0}
-  m_anchorWorldPosition: {x: 0.89706075, y: 1.7981629, z: -0.26025528}
+  m_anchorWorldPosition: {x: 2.9565508, y: 1.8581, z: 0.7979413}
   m_anchorWorldRotation: {x: 270.30963, y: 321.57086, z: 40.971188}
   shouldRender: 1
   stereoCameraHead: {fileID: 1496273703343016}
@@ -1723,11 +1735,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasOrigin: {fileID: 0}
-  m_canvasOriginWorldPosition: {x: -0.8655431, y: 1.662668, z: -0.34550676}
-  m_canvasOriginWorldRotation: {x: 270.31342, y: 321.571, z: 35.836895}
+  m_canvasOriginWorldPosition: {x: 0.96610063, y: 1.662588, z: 1.1284945}
+  m_canvasOriginWorldRotation: {x: 270.30902, y: 321.57135, z: 23.626047}
   anchorTransform: {fileID: 0}
-  m_anchorWorldPosition: {x: -0.8655431, y: 1.662668, z: -0.34550676}
-  m_anchorWorldRotation: {x: 270.31277, y: 321.57077, z: 35.83724}
+  m_anchorWorldPosition: {x: 0.96610063, y: 1.662588, z: 1.1284945}
+  m_anchorWorldRotation: {x: 270.30774, y: 321.5707, z: 23.626785}
   shouldRender: 1
   stereoCameraHead: {fileID: 1367519417168584}
   stereoCameraEye: {fileID: 20196225907270342}
@@ -1823,6 +1835,11 @@ MonoBehaviour:
   maxAngle: 30
   maxTorque: 2250.9
   CarModel: {fileID: 4829498050258554}
+  FrictionRate: 0.7
+  AccelerateRate: 0
+  BrakeRate: 0
+  ReverseRate: 0
+  TurnRate: 0
 --- !u!114 &114934391607709066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1877,8 +1894,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 214148.83
-    damper: 34263.812
+    spring: 214148.8
+    damper: 34263.81
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.0449728
@@ -1906,8 +1923,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 214052.22
-    damper: 34248.355
+    spring: 214052.39
+    damper: 34248.383
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.0449728
@@ -1935,10 +1952,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 184895.94
-    damper: 29583.35
+    spring: 184895.86
+    damper: 29583.338
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620003
   m_ForceAppPointDistance: 1.0449728
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -1993,10 +2010,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 349445.6
-    damper: 55911.293
+    spring: 349445.5
+    damper: 55911.28
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.0449733
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -2025,7 +2042,7 @@ WheelCollider:
     spring: 184799.47
     damper: 29567.916
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.0449728
   m_Mass: 20
   m_WheelDampingRate: 0.25
