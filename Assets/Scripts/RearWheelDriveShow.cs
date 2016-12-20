@@ -4,6 +4,12 @@ using System.Collections;
 // © By Eadmond, 12.17.2016
 // This script controls the wheels of the truck.
 
+// Truck weight  KG.
+// Torque  NM.
+// Length Meter.
+
+
+
 public class RearWheelDriveShow : MonoBehaviour {
 
     LogitechGSDK.LogiControllerPropertiesData properties;
@@ -13,6 +19,11 @@ public class RearWheelDriveShow : MonoBehaviour {
 	public float maxAngle = 30;
 	public float maxTorque = 300;
     public Transform CarModel;
+
+    public float AccelerateRate;
+    public float BrakeRate;
+    public float ReverseRate;
+    public float TurnRate;
 
     // here we find all the WheelColliders down in the hierarchy
     void Start()
@@ -88,4 +99,29 @@ public class RearWheelDriveShow : MonoBehaviour {
             Debug.Log("THIS WINDOW NEEDS TO BE IN FOREGROUND IN ORDER FOR THE SDK TO WORK PROPERLY");
         }
 	}
+
+    // Controll realated to truck.
+    // pedal [ 0 ~ 1];
+
+    public void OnAccel(float pedal, int shift)
+    {
+        AccelerateRate = pedal;
+    }
+
+    public void OnBrake(float pedal)
+    {
+
+    }
+
+    public void OnReverse(float pedal, int shift)
+    {
+
+    }
+
+    // angle should be -1 ~ 1. -1 means most left, 1 means most right.
+    public void OnTurn(float angle)
+    {
+
+    }
+
 }
