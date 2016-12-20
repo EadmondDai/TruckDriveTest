@@ -44,6 +44,17 @@ public class RearWheelDriveShow : MonoBehaviour {
             float angle = maxAngle * horizontalMove * deltaTime;
             float torque = maxTorque * (verticalMove - minusVertical) * deltaTime; 
 
+            // Temp method for testing.
+            if(Input.GetAxis("Vertical") !=0)
+            {
+                torque = maxTorque * Input.GetAxis("Vertical");
+            }
+
+            if(Input.GetAxis("Horizontal") != 0)
+            {
+                angle = maxAngle * Input.GetAxis("Horizontal");
+            }
+
             foreach (WheelCollider wheel in wheels)
             {
                 // a simple car where front wheels steer while rear ones drive
