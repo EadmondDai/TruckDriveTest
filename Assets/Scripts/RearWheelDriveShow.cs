@@ -7,6 +7,19 @@ using System.Collections;
 // Truck weight  KG.
 // Torque  NM.
 // Length Meter.
+// Newton  F 	= 	m 	⋅ 	a     1 N 	= 	1 kg 	⋅ 	m/s2
+
+// Uinsg Enging PACCAR MX-13 510
+
+// 驱动力=扭矩×变速箱齿比×主减速器速比×机械效率÷轮胎半径（单位：米）
+// 通过这个就能计算出施加在轮胎上面的touque.
+
+// Tire 0.5715 Meter
+// Torque = 2500 N*M at 1000 ~ 1400 rpm
+// Engine output = 340 kw = 0.34 N*M
+// 该引擎Trouque 变化大约如下：
+// <= 1400rpm 2500 NM 1850 Lb Ft
+//    1900rpm 1708 NM 1260 Lb Ft   
 
 
 
@@ -21,7 +34,11 @@ public class RearWheelDriveShow : MonoBehaviour {
     public Transform CarModel;
 
     public float FrictionRate = 0.7f;
+    public float EngineSpinToTireRate = 26;
+    public float EffecieceRemain = 0.88f;
+    public float CurrentRPM = 1400;
 
+    // Those are the input staff.
     public float AccelerateRate;
     public float BrakeRate;
     public float ReverseRate;
@@ -96,9 +113,11 @@ public class RearWheelDriveShow : MonoBehaviour {
                 wheel.steerAngle = TurnRate;
 
             if (wheel.transform.localPosition.z < 0)
-                wheel.motorTorque = AccelerateRate * maxTorque;
+                wheel.motorTorque = AccelerateRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
 
             // Handle break and reverse.
+            if (wheel.transform.localPosition.z < 0)
+                wheel.brakeTorque = BrakeRate * 14969 / 6;
 
             // update visual wheels if any
             {
