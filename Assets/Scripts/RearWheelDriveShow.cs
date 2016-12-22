@@ -39,10 +39,12 @@ public class RearWheelDriveShow : MonoBehaviour {
     public float CurrentRPM = 1400;
 
     // Those are the input staff.
-    public float AccelerateRate;
-    public float BrakeRate;
-    public float ReverseRate;
-    public float TurnRate;
+    public float AccelerateRate = 0;
+    public float BrakeRate = 0;
+    public float ReverseRate = 0;
+    public float TurnRate = 0;
+
+    public Rigidbody TruckRigidBody;
 
     // here we find all the WheelColliders down in the hierarchy
     void Start()
@@ -66,9 +68,9 @@ public class RearWheelDriveShow : MonoBehaviour {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
             rec = LogitechGSDK.LogiGetStateUnity(0);
 
-            float verticalMove = -(rec.lY - 32767) / 10000; // To get only positive number
+            float verticalMove = -(rec.lY - 32767) / (65535.0f); // To get only positive number
             float horizontalMove = rec.lX / 1000;
-            float minusVertical = -(rec.lRz - 32767) / 10000;
+            float minusVertical = -(rec.lRz - 32767) / (65535.0f);
             //Debug.Log(" lrz : " + rec.lRz.ToString() + " minus :" + minusVertical.ToString());
 
             float angle = maxAngle * horizontalMove * deltaTime;
@@ -76,8 +78,18 @@ public class RearWheelDriveShow : MonoBehaviour {
 
             OnAccel(verticalMove, 0);
             OnTurn(horizontalMove * deltaTime);
-            OnBrake(-(rec.lRz - 32767) / 10000);
-            OnReverse(-(rec.lRz - 32767) / 10000, 0);
+
+            // Need to know if the car is moving forward or moving backward.
+            Vector3 velocity = TruckRigidBody.velocity;
+            Vector3 localVel = transform.InverseTransformDirection(velocity);
+            if (localVel.z > 0.01)
+            {
+                OnBrake(-(rec.lRz - 32767) / 65535.0f);
+            }
+            else
+            {
+                OnReverse(-(rec.lRz - 32767) / 65535.0f, 0);
+            }
 
             // Temp method for testing.
             if (Input.GetAxis("Vertical") !=0)
@@ -106,18 +118,31 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     void FixedUpdate()
     {
+
+
         foreach (WheelCollider wheel in wheels)
         {
             // a simple car where front wheels steer while rear ones drive
+            // localPosition is used to judge if it is front wheel or back wheel.
             if (wheel.transform.localPosition.z > 0)
                 wheel.steerAngle = TurnRate;
 
-            if (wheel.transform.localPosition.z < 0)
-                wheel.motorTorque = AccelerateRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
+            // Only back wheels will accelerate.
+            if (wheel.transform.localPosition.z < 0 )
+            {
+                if(AccelerateRate > 0)
+                    wheel.motorTorque = AccelerateRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
 
-            // Handle break and reverse.
-            if (wheel.transform.localPosition.z < 0)
-                wheel.brakeTorque = BrakeRate * 14969 / 6;
+                if (BrakeRate > 0)
+                    wheel.brakeTorque = BrakeRate * 14969 / 6;
+
+                if (ReverseRate > 0)
+                    wheel.motorTorque = -ReverseRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
+            }
+                
+
+            // If the car is moving forward, step on brake to brake.
+            // If the car is still or moving backward, step on brake to reverse.
 
             // update visual wheels if any
             {
