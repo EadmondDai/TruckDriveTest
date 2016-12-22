@@ -95,7 +95,6 @@ public class RearWheelDriveShow : MonoBehaviour {
             if (Input.GetAxis("Vertical") !=0)
             {
                 AccelerateRate = maxTorque * Input.GetAxis("Vertical");
-                
             }
 
             if(Input.GetAxis("Horizontal") != 0)
@@ -127,17 +126,19 @@ public class RearWheelDriveShow : MonoBehaviour {
             if (wheel.transform.localPosition.z > 0)
                 wheel.steerAngle = TurnRate;
 
+            Debug.Log(wheel.brakeTorque);
+
             // Only back wheels will accelerate.
-            if (wheel.transform.localPosition.z < 0 )
+            if (wheel.transform.localPosition.z < 0)
             {
-                if(AccelerateRate > 0)
+                if (AccelerateRate > 0.1f)
                     wheel.motorTorque = AccelerateRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
 
-                if (BrakeRate > 0)
+                if (BrakeRate > 0.1f || ReverseRate > 0.1f)
+                {
                     wheel.brakeTorque = BrakeRate * 14969 / 6;
-
-                if (ReverseRate > 0)
                     wheel.motorTorque = -ReverseRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
+                }  
             }
                 
 
@@ -171,11 +172,13 @@ public class RearWheelDriveShow : MonoBehaviour {
     public void OnBrake(float pedal)
     {
         BrakeRate = pedal;
+        ReverseRate = 0;
     }
 
     public void OnReverse(float pedal, int shift)
     {
         ReverseRate = pedal;
+        BrakeRate = 0;
     }
 
     // angle.  Negative means turn left, positive means turn right.

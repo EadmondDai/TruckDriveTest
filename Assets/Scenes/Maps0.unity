@@ -1300,6 +1300,21 @@ Prefab:
       propertyPath: DeltaDistance
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114139282997025394, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114926929119254840, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114139282997025394, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: CarModel
+      value: 
+      objectReference: {fileID: 1551432427}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
@@ -1790,6 +1805,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b589292c2a5cfd24696fc4f09a5f3790, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1551432427 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4829498050258554, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097524825}
 --- !u!1001 &1589794326
 Prefab:
   m_ObjectHideFlags: 0
