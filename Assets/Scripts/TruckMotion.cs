@@ -61,12 +61,12 @@ public class TruckMotion : MonoBehaviour {
         else
         {
             // Oil Pedal: Up, W
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
                 OnAccel(1, 0);
             else
                 OnAccel(0, 0);
             // Brake Pedal: Down, S
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
             {
                 if (GetComponent<Rigidbody>().velocity.magnitude > 0.1f)
                     OnBrake(1);
@@ -78,9 +78,9 @@ public class TruckMotion : MonoBehaviour {
                 OnReverse(0,0);                
             }
             // Wheel
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 OnTurn(-1);
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 OnTurn(1);
             else
                 OnTurn(0);

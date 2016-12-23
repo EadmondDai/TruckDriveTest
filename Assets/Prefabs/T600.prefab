@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 146171764341924508}
   m_Layer: 0
   m_Name: a2l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 23410995536224032}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 114139282997025394}
   m_Layer: 0
   m_Name: T600
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 146077481003257436}
   m_Layer: 0
   m_Name: a1r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 146361208115297394}
   m_Layer: 0
   m_Name: a0l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 146016371029045694}
   m_Layer: 0
   m_Name: a1l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 146681706041164040}
   m_Layer: 0
   m_Name: a0r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 23782981407643536}
   m_Layer: 0
   m_Name: a1r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 23339530321637754}
   m_Layer: 0
   m_Name: Exhaust Pipe
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 23390076593637942}
   m_Layer: 0
   m_Name: a0r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 23553987122462758}
   m_Layer: 0
   m_Name: a2r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 23382018660418006}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 23540491341641576}
   m_Layer: 0
   m_Name: a2l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 146875221736140608}
   m_Layer: 0
   m_Name: a2r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 23649569585446706}
   m_Layer: 0
   m_Name: a0l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 95250838381183584}
   m_Layer: 0
   m_Name: T600 Trans
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 23029743888021762}
   m_Layer: 0
   m_Name: a1l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,7 +664,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374862452248668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.86, y: 0, z: 0}
+  m_LocalPosition: {x: 5.8, y: 0, z: 53.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4829498050258554}
@@ -1546,7 +1546,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1531344359544584}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &92629771490183980
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1577,11 +1577,19 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374862452248668}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79bb9371a024094ebb46ab9c3a9c556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAngle: 30
+  maxTorque: 600
+  CarModel: {fileID: 4829498050258554}
+  FrictionRate: 0.7
+  AccelerateRate: 0
+  BrakeRate: 0
+  ReverseRate: 0
+  TurnRate: 0
 --- !u!114 &114250346417121426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1827,7 +1835,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374862452248668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08ffd3a9c999ede4b99fefd7189a0ea6, type: 3}
   m_Name: 
@@ -1836,10 +1844,14 @@ MonoBehaviour:
   maxTorque: 2250.9
   CarModel: {fileID: 4829498050258554}
   FrictionRate: 0.7
+  EngineSpinToTireRate: 26
+  EffecieceRemain: 0.88
+  CurrentRPM: 1400
   AccelerateRate: 0
   BrakeRate: 0
   ReverseRate: 0
   TurnRate: 0
+  TruckRigidBody: {fileID: 0}
 --- !u!114 &114934391607709066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1894,10 +1906,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 214148.8
-    damper: 34263.81
+    spring: 214148.78
+    damper: 34263.805
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.0449728
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -1952,10 +1964,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 184895.86
-    damper: 29583.338
+    spring: 184895.94
+    damper: 29583.35
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620003
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.0449728
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -2010,10 +2022,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 349445.5
-    damper: 55911.28
+    spring: 349445.6
+    damper: 55911.293
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.0449733
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -2042,7 +2054,7 @@ WheelCollider:
     spring: 184799.47
     damper: 29567.916
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19619998
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.0449728
   m_Mass: 20
   m_WheelDampingRate: 0.25
