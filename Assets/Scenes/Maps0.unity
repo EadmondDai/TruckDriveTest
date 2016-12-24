@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2087,51 +2087,6 @@ Prefab:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 1942634006}
-    - target: {fileID: 54988086221781842, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 146705106932814904, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.spring
-      value: 249.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: 146705106932814904, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.damper
-      value: 39.999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 146219067641433114, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.spring
-      value: 249.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: 146219067641433114, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.damper
-      value: 39.999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 146364186735285124, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.spring
-      value: 249.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: 146364186735285124, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.damper
-      value: 39.999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 146524360829600990, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.spring
-      value: 249.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: 146524360829600990, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_SuspensionSpring.damper
-      value: 39.999996
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
   m_IsPrefabParent: 0
