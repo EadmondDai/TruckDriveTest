@@ -7,7 +7,7 @@ public class RearWheelDrive : MonoBehaviour {
 
 	public float maxAngle = 30;
 	public float maxTorque = 300;
-	public GameObject wheelShape;
+    public Transform CarModel;
 
 	// here we find all the WheelColliders down in the hierarchy
 	public void Start()
@@ -45,14 +45,14 @@ public class RearWheelDrive : MonoBehaviour {
             //		wheel.motorTorque = torque;
 
             // update visual wheels if any
-            if (wheelShape)
+            //if (wheelShape)
             {
                 Quaternion q;
                 Vector3 p;
                 wheel.GetWorldPose(out p, out q);
 
                 // assume that the only child of the wheelcollider is the wheel shape
-                Transform shapeTransform = wheel.transform.GetChild(0);
+                Transform shapeTransform = CarModel.FindChild(wheel.name); ;
                 shapeTransform.position = p;
                 shapeTransform.rotation = q;
             }
