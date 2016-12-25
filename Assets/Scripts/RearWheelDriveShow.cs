@@ -126,8 +126,6 @@ public class RearWheelDriveShow : MonoBehaviour {
             if (wheel.transform.localPosition.z > 0)
                 wheel.steerAngle = TurnRate;
 
-            Debug.Log(wheel.brakeTorque);
-
             // Only back wheels will accelerate.
             if (wheel.transform.localPosition.z < 0)
             {
