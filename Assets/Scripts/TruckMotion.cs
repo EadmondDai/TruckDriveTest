@@ -23,7 +23,7 @@ public class TruckMotion : MonoBehaviour {
     public float TurnRate;
 
     // Use this for initialization
-    void Start () {
+    void Start () {        
         wheels = GetComponentsInChildren<WheelCollider>();
 
         Debug.Log(LogitechGSDK.LogiSteeringInitialize(false));
