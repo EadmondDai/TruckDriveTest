@@ -78,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1062748251067652
 GameObject:
   m_ObjectHideFlags: 1
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1940137636353090
 GameObject:
   m_ObjectHideFlags: 1
@@ -1203,13 +1203,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636283523766596}
-  m_LocalRotation: {x: -0.24561462, y: -0.6646825, z: -0.66268045, w: 0.24233305}
-  m_LocalPosition: {x: -0.81999993, y: 0.26, z: 0.01999998}
+  m_LocalRotation: {x: -0.21532764, y: -0.6751026, z: -0.67295414, w: 0.21213986}
+  m_LocalPosition: {x: -0.674, y: 0.26000357, z: 0.20099998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4737040244152334}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 269.689, y: 321.57098, z: -101.203}
+  m_LocalEulerAnglesHint: {x: 269.69, y: 321.57202, z: -106.384995}
 --- !u!4 &4735459794230634
 Transform:
   m_ObjectHideFlags: 1
@@ -1297,13 +1297,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1307889850808874}
-  m_LocalRotation: {x: 0.090104714, y: -0.7028467, z: -0.699579, w: -0.09207031}
-  m_LocalPosition: {x: 0.19, y: -0.45, z: -0.16}
+  m_LocalRotation: {x: 0.13804281, y: -0.6950226, z: -0.6916281, w: -0.13977994}
+  m_LocalPosition: {x: 0.19000006, y: -0.45000005, z: -0.15999961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4295386543834820}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 270.309, y: 321.5714, z: 23.62605}
+  m_LocalEulerAnglesHint: {x: 269.69202, y: 321.569, z: -164.228}
 --- !u!4 &4945508504198262
 Transform:
   m_ObjectHideFlags: 1
@@ -1393,7 +1393,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 2.4
+  near clip plane: 7.9
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -2546,8 +2546,8 @@ MonoBehaviour:
   m_canvasOriginWorldPosition: {x: 2.9565508, y: 1.8581, z: 0.7979413}
   m_canvasOriginWorldRotation: {x: 270.31152, y: 321.57166, z: 40.970303}
   anchorTransform: {fileID: 4945508504198262}
-  m_anchorWorldPosition: {x: 4.0362, y: 2.9160998, z: 13.4768}
-  m_anchorWorldRotation: {x: 270.30963, y: 321.57126, z: 78.79658}
+  m_anchorWorldPosition: {x: 3.8463998, y: 2.9161046, z: 13.2415}
+  m_anchorWorldRotation: {x: 270.30902, y: 321.5719, z: 73.61533}
   shouldRender: 1
   stereoCameraHead: {fileID: 1496273703343016}
   stereoCameraEye: {fileID: 20447464514932616}
@@ -2633,8 +2633,8 @@ MonoBehaviour:
   m_canvasOriginWorldPosition: {x: 1.8686883, y: 1.6130681, z: 13.564901}
   m_canvasOriginWorldRotation: {x: 270.30902, y: 321.57135, z: 23.626047}
   anchorTransform: {fileID: 4262250739942720}
-  m_anchorWorldPosition: {x: 0.50539994, y: 1.9930999, z: 13.7108}
-  m_anchorWorldRotation: {x: 270.30774, y: 321.57098, z: 23.626429}
+  m_anchorWorldPosition: {x: 0.50539994, y: 1.9930999, z: 13.710799}
+  m_anchorWorldRotation: {x: 270.3071, y: 321.5696, z: 15.771535}
   shouldRender: 1
   stereoCameraHead: {fileID: 1367519417168584}
   stereoCameraEye: {fileID: 20196225907270342}
