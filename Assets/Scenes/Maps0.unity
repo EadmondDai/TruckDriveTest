@@ -1060,6 +1060,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 72.72301, y: 0, z: 0}
+--- !u!1 &701394587 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1583579047384228, guid: aaaa8e57f74fe2648897a039a9284434,
+    type: 2}
+  m_PrefabInternal: {fileID: 1839705759}
 --- !u!1001 &770045577
 Prefab:
   m_ObjectHideFlags: 0
@@ -1194,6 +1199,11 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54216132039971086, guid: d3eb83b3a39a4944d92050f2f29687ba,
     type: 2}
   m_PrefabInternal: {fileID: 1726490454}
+--- !u!1 &848018698 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1622759045246228, guid: aaaa8e57f74fe2648897a039a9284434,
+    type: 2}
+  m_PrefabInternal: {fileID: 1839705759}
 --- !u!1001 &949654268
 Prefab:
   m_ObjectHideFlags: 0
@@ -1897,6 +1907,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b589292c2a5cfd24696fc4f09a5f3790, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1534348938 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1716978611938420, guid: aaaa8e57f74fe2648897a039a9284434,
+    type: 2}
+  m_PrefabInternal: {fileID: 1839705759}
 --- !u!1001 &1589794326
 Prefab:
   m_ObjectHideFlags: 0
@@ -2052,11 +2067,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: TrailerLeftTurnLightGroup
+      value: 
+      objectReference: {fileID: 1534348938}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: TrailerRightTurnLightGroup
+      value: 
+      objectReference: {fileID: 848018698}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: TrailerBrakeLightGroup
+      value: 
+      objectReference: {fileID: 701394587}
     - target: {fileID: 59197186282076624, guid: d3eb83b3a39a4944d92050f2f29687ba,
         type: 2}
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 781580030}
+    - target: {fileID: 146171764341924508, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: m_SuspensionSpring.spring
+      value: 98907.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 146171764341924508, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: m_SuspensionSpring.damper
+      value: 15825.164
+      objectReference: {fileID: 0}
     - target: {fileID: 146016371029045694, guid: d3eb83b3a39a4944d92050f2f29687ba,
         type: 2}
       propertyPath: m_SuspensionSpring.spring
@@ -2077,11 +2117,6 @@ Prefab:
       propertyPath: m_SuspensionSpring.damper
       value: 15814.917
       objectReference: {fileID: 0}
-    - target: {fileID: 146875221736140608, guid: d3eb83b3a39a4944d92050f2f29687ba,
-        type: 2}
-      propertyPath: m_SuspensionDistance
-      value: 0.1962
-      objectReference: {fileID: 0}
     - target: {fileID: 146077481003257436, guid: d3eb83b3a39a4944d92050f2f29687ba,
         type: 2}
       propertyPath: m_SuspensionSpring.spring
@@ -2096,16 +2131,6 @@ Prefab:
         type: 2}
       propertyPath: m_SuspensionDistance
       value: 0.19620003
-      objectReference: {fileID: 0}
-    - target: {fileID: 146171764341924508, guid: d3eb83b3a39a4944d92050f2f29687ba,
-        type: 2}
-      propertyPath: m_SuspensionSpring.spring
-      value: 98907.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 146171764341924508, guid: d3eb83b3a39a4944d92050f2f29687ba,
-        type: 2}
-      propertyPath: m_SuspensionSpring.damper
-      value: 15825.164
       objectReference: {fileID: 0}
     - target: {fileID: 146681706041164040, guid: d3eb83b3a39a4944d92050f2f29687ba,
         type: 2}
@@ -2231,35 +2256,6 @@ Prefab:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 835625871}
-    - target: {fileID: 23718419234458552, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967638540522644, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1165161066326926, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1634337047226496, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791719827299360, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
-    - target: {fileID: 1217068867054684, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_TagString
-      value: Trailer
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
   m_IsPrefabParent: 0

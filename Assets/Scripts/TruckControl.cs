@@ -35,6 +35,12 @@ public class TruckControl : MonoBehaviour {
     public bool IsOnReverse = false;
     public GameObject ReverseLightGroup;
 
+    // Related to trailer light control;
+    public bool IsTrailerConnected = false;
+    public GameObject TrailerLeftTurnLightGroup;
+    public GameObject TrailerRightTurnLightGroup;
+    public GameObject TrailerBrakeLightGroup;
+
     // Use this for initialization
     void Start () {
         Debug.Log(LogitechGSDK.LogiSteeringInitialize(false));
@@ -144,6 +150,13 @@ public class TruckControl : MonoBehaviour {
         BrakeLightGroup.SetActive(IsOnBrake);
 
         ReverseLightGroup.SetActive(IsOnReverse);
+
+        if(IsTrailerConnected)
+        {
+            TrailerBrakeLightGroup.SetActive(IsOnBrake);
+            TrailerLeftTurnLightGroup.SetActive(LeftTurnLightGroup.activeSelf);
+            TrailerRightTurnLightGroup.SetActive(RightTurnLightGroup.activeSelf);
+        }
     }
 
     public void OnTurnSteerWheel(float rate)

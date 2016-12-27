@@ -3673,6 +3673,10 @@ MonoBehaviour:
   BrakeLightGroup: {fileID: 1627968187555414}
   IsOnReverse: 0
   ReverseLightGroup: {fileID: 1401429831139672}
+  IsTrailerConnected: 1
+  TrailerLeftTurnLightGroup: {fileID: 0}
+  TrailerRightTurnLightGroup: {fileID: 0}
+  TrailerBrakeLightGroup: {fileID: 0}
 --- !u!114 &114600465709257322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3906,10 +3910,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 167005.72
-    damper: 26720.916
+    spring: 167005.67
+    damper: 26720.906
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.491813
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -3935,8 +3939,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 98907.35
-    damper: 15825.177
+    spring: 98907.37
+    damper: 15825.18
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.491813
@@ -3994,9 +3998,9 @@ WheelCollider:
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 482499.9
-    damper: 77199.984
+    damper: 77199.99
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19619998
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.4918134
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -4022,10 +4026,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 98843.13
-    damper: 15814.901
+    spring: 98843.195
+    damper: 15814.911
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.491813
   m_Mass: 20
   m_WheelDampingRate: 0.25
