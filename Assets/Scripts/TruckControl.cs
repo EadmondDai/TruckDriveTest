@@ -116,7 +116,7 @@ public class TruckControl : MonoBehaviour {
     void FixedUpdate()
     {
         // Rotate the SteerWheel 
-        SteelWheelTransObj.eulerAngles = new Vector3(45, 0, -WheelRotationRate* MaxWheelAngle);
+        SteelWheelTransObj.localEulerAngles  = new Vector3(45, 0, -WheelRotationRate* MaxWheelAngle);
 
         if(RightTurnLightOn)
         {
