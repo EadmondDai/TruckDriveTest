@@ -14,6 +14,9 @@ public class ColManager : MonoBehaviour
     bool headInArea = false;
     bool trailerInArea = false;
     bool objectiveDone = false;
+    // stages
+    string[] stageNames = new string[] { "Maps1_1", "Maps1_2" };
+
     // funcs
 
     // Player In Area --> Next Stage
@@ -32,7 +35,8 @@ public class ColManager : MonoBehaviour
             Debug.LogWarning("GameObject achieved!");
             // show info
             UICanvas.Singleton.showInstruction("Successful! Next Stage!");
-            // TODO: next stage
+            // next stage
+            nextStage();            
         }
     }
 
@@ -41,13 +45,29 @@ public class ColManager : MonoBehaviour
     {
         // show fail info
         UICanvas.Singleton.showInstruction("You hit the curb! Failed!");
-        //TODO: redo current stage
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // redo current stage
+        reloadStage();
     }
     public void onPlayerHitWall()
     {
         UICanvas.Singleton.showInstruction("You hit the wall! Failed!");
-        //TODO: redo current stage
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // redo current stage
+        reloadStage();
+    }
+    void reloadStage()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+    void nextStage()
+    {
+        string curName = SceneManager.GetActiveScene().name;
+        int i = 0;
+        for (; i < stageNames.Length; i++)
+            if (stageNames[i] == curName)
+                break;
+        if (i >= stageNames.Length)
+            i = 0;
+        SceneManager.LoadScene(stageNames[i], LoadSceneMode.Single);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageNames[i]));
     }
 }
