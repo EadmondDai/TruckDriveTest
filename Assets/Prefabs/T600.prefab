@@ -3349,6 +3349,8 @@ MonoBehaviour:
   MaxWheelAngle: 90
   DefaultLightChangeInterval: 0.5
   NextLightChangeInterval: 0
+  DefaultLigthBlinkInterval: 0.5
+  NextLightBlinkInterval: 0
   LeftTurnLightOn: 0
   LeftTurnLightGroup: {fileID: 1360011765377434}
   RightTurnLightOn: 0
@@ -3489,7 +3491,7 @@ MonoBehaviour:
   ReverseRate: 0
   TurnRate: 0
   TruckRigidBody: {fileID: 54318957669259134}
-  TruckControlScript: {fileID: 0}
+  TruckControlScript: {fileID: 114551771248971324}
 --- !u!114 &114934391607709066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3557,8 +3559,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 167069.73
-    damper: 26731.156
+    spring: 167069.61
+    damper: 26731.139
     targetPosition: 0.5
   m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.491813
@@ -3586,10 +3588,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 167005.69
-    damper: 26720.912
+    spring: 167005.72
+    damper: 26720.916
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620003
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.491813
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -3615,8 +3617,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 98907.27
-    damper: 15825.164
+    spring: 98907.35
+    damper: 15825.177
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.491813
@@ -3673,10 +3675,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 482499.8
-    damper: 77199.97
+    spring: 482499.9
+    damper: 77199.984
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.4918134
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -3702,10 +3704,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
-    spring: 98843.234
-    damper: 15814.917
+    spring: 98843.13
+    damper: 15814.901
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.491813
   m_Mass: 20
   m_WheelDampingRate: 0.25

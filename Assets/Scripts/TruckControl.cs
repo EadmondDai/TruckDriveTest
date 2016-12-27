@@ -21,6 +21,8 @@ public class TruckControl : MonoBehaviour {
     // Related to turnning light.
     public float DefaultLightChangeInterval = 0.5f;
     public float NextLightChangeInterval = 0;
+    public float DefaultLigthBlinkInterval = 0.3f;
+    public float NextLightBlinkInterval = 0;
     public bool LeftTurnLightOn = false;
     public GameObject LeftTurnLightGroup;
 
@@ -104,9 +106,36 @@ public class TruckControl : MonoBehaviour {
         // Rotate the SteerWheel 
         SteelWheelTransObj.eulerAngles = new Vector3(45, 0, -WheelRotationRate* MaxWheelAngle);
 
-        RightTurnLightGroup.SetActive(RightTurnLightOn);
+        if(RightTurnLightOn)
+        {
+            NextLightBlinkInterval -= Time.deltaTime;
+            if(NextLightBlinkInterval <=0)
+            {
+                RightTurnLightGroup.SetActive(!RightTurnLightGroup.activeSelf);
+                NextLightBlinkInterval = DefaultLigthBlinkInterval;
+            }
+        }
+        else
+        {
+            RightTurnLightGroup.SetActive(false);
+        }
 
-        LeftTurnLightGroup.SetActive(LeftTurnLightOn);
+        if (LeftTurnLightOn)
+        {
+            NextLightBlinkInterval -= Time.deltaTime;
+            if(NextLightBlinkInterval <=0)
+            {
+                LeftTurnLightGroup.SetActive(!LeftTurnLightGroup.activeSelf);
+                NextLightBlinkInterval = DefaultLigthBlinkInterval;
+            }
+            
+        }
+        else
+        {
+            LeftTurnLightGroup.SetActive(false);
+        }
+
+        
     }
 
     public void OnTurnSteerWheel(float rate)
@@ -121,6 +150,7 @@ public class TruckControl : MonoBehaviour {
 
         LeftTurnLightOn = !LeftTurnLightOn;
 
+        NextLightBlinkInterval = 0;
         NextLightChangeInterval = DefaultLightChangeInterval;
     }
 
@@ -131,6 +161,7 @@ public class TruckControl : MonoBehaviour {
 
         RightTurnLightOn = !RightTurnLightOn;
 
+        NextLightBlinkInterval = 0;
         NextLightChangeInterval = DefaultLightChangeInterval;
     }
 }
