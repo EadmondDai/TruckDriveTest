@@ -2,23 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColManager : MonoBehaviour {
+public class ColManager : MonoBehaviour
+{
+    // for singleton
     private static ColManager _singleton;
     public static ColManager Singleton { get { return _singleton; } }
     void Awake() { _singleton = this; }
     void OnDestroy() { _singleton = null; }
+    // props
+    bool headInArea = false;
+    bool trailerInArea = false;
+    bool objectiveDone = false;
+    // funcs
 
-    // player hits curb
-    public void PlayerHitsCurb()
+    // Player In Area --> Next Stage
+    public void onPlayerInArea(bool isHead)
     {
-        Debug.LogWarning("Player hits the curb!");
+        Debug.LogWarning("Player in area! isHead=" + isHead);
+        if (objectiveDone)
+            return;
+        if (isHead)
+            headInArea = true;
+        else
+            trailerInArea = true;
+        if(headInArea && trailerInArea)
+        {
+            objectiveDone = true;
+            Debug.LogWarning("GameObject achieved!");
+            // show info
+            UICanvas.Singleton.showInstruction("Successful! Next Stage!");
+            // TODO: next stage
+        }
     }
 
-    // player hits an AI car
-    public void PlayerHitsCar()
+    // Player Hit Curb --> Redo Current Stage
+    public void onPlayerHitCurb()
     {
-        Debug.LogWarning("Player hits an AI car!");
+        // show fail info
+        UICanvas.Singleton.showInstruction("You hit the curb! Failed!");
+        //TODO: redo current stage
     }
-
-
+    public void onPlayerHitWall()
+    {
+        UICanvas.Singleton.showInstruction("You hit the wall! Failed!");
+        //TODO: redo current stage
+    }
 }

@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Ai
   - Wall
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  - Curb
+  - Objective
+>>>>>>> Stashed changes
+=======
+  - Curb
+  - Objective
+>>>>>>> Stashed changes
   - Trailer
   layers:
   - Default
