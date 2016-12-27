@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 7667919fe1defe641bbbf02873cd357d
+timeCreated: 1482796586
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Exhaust Pipe
+    100004: Joint
+    100006: LeftBackTires1
+    100008: LeftBackTires2
+    100010: LeftBar
+    100012: LeftFrontWheel
+    100014: LeftWiperBlade
+    100016: LeftWiperBody
+    100018: RightBackTires1
+    100020: RightBackTires2
+    100022: RightBar
+    100024: RightFrontWheel
+    100026: RightWiperBlade
+    100028: RightWiperBody
+    100030: SteeringWheel
+    100032: //RootNode
+    400000: Body
+    400002: Exhaust Pipe
+    400004: Joint
+    400006: LeftBackTires1
+    400008: LeftBackTires2
+    400010: LeftBar
+    400012: LeftFrontWheel
+    400014: LeftWiperBlade
+    400016: LeftWiperBody
+    400018: RightBackTires1
+    400020: RightBackTires2
+    400022: RightBar
+    400024: RightFrontWheel
+    400026: RightWiperBlade
+    400028: RightWiperBody
+    400030: SteeringWheel
+    400032: //RootNode
+    2300000: Body
+    2300002: Exhaust Pipe
+    2300004: Joint
+    2300006: LeftBackTires1
+    2300008: LeftBackTires2
+    2300010: LeftBar
+    2300012: LeftFrontWheel
+    2300014: LeftWiperBlade
+    2300016: LeftWiperBody
+    2300018: RightBackTires1
+    2300020: RightBackTires2
+    2300022: RightBar
+    2300024: RightFrontWheel
+    2300026: RightWiperBlade
+    2300028: RightWiperBody
+    2300030: SteeringWheel
+    3300000: Body
+    3300002: Exhaust Pipe
+    3300004: Joint
+    3300006: LeftBackTires1
+    3300008: LeftBackTires2
+    3300010: LeftBar
+    3300012: LeftFrontWheel
+    3300014: LeftWiperBlade
+    3300016: LeftWiperBody
+    3300018: RightBackTires1
+    3300020: RightBackTires2
+    3300022: RightBar
+    3300024: RightFrontWheel
+    3300026: RightWiperBlade
+    3300028: RightWiperBody
+    3300030: SteeringWheel
+    4300000: Exhaust Pipe
+    4300002: Body
+    4300004: LeftFrontWheel
+    4300006: RightFrontWheel
+    4300008: LeftBackTires1
+    4300010: LeftBackTires2
+    4300012: RightBackTires1
+    4300014: RightBackTires2
+    4300016: LeftWiperBlade
+    4300018: LeftWiperBody
+    4300020: RightWiperBlade
+    4300022: RightWiperBody
+    4300024: SteeringWheel
+    4300026: RightBar
+    4300028: LeftBar
+    4300030: Joint
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

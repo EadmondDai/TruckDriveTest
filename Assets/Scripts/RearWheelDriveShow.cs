@@ -21,6 +21,8 @@ using System.Collections;
 // <= 1400rpm 2500 NM 1850 Lb Ft
 //    1900rpm 1708 NM 1260 Lb Ft   
 
+// This script access TruckControl script.
+
 
 
 public class RearWheelDriveShow : MonoBehaviour {
@@ -46,6 +48,8 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     public Rigidbody TruckRigidBody;
 
+    public TruckControl TruckControlScript;
+
     // here we find all the WheelColliders down in the hierarchy
     void Start()
 	{
@@ -69,15 +73,14 @@ public class RearWheelDriveShow : MonoBehaviour {
             rec = LogitechGSDK.LogiGetStateUnity(0);
 
             float verticalMove = -(rec.lY - 32767) / (65535.0f); // To get only positive number
-            float horizontalMove = rec.lX / 1000;
+            float horizontalMoveRate = rec.lX / 32768.0f;
             float minusVertical = -(rec.lRz - 32767) / (65535.0f);
-            //Debug.Log(" lrz : " + rec.lRz.ToString() + " minus :" + minusVertical.ToString());
 
-            float angle = maxAngle * horizontalMove * deltaTime;
+            float angle = maxAngle * horizontalMoveRate * deltaTime;
             float torque = maxTorque * (verticalMove - minusVertical) * deltaTime;
 
             OnAccel(verticalMove, 0);
-            OnTurn(horizontalMove * deltaTime);
+            OnTurn(horizontalMoveRate);
 
             // Need to know if the car is moving forward or moving backward.
             Vector3 velocity = TruckRigidBody.velocity;
@@ -89,17 +92,6 @@ public class RearWheelDriveShow : MonoBehaviour {
             else
             {
                 OnReverse(-(rec.lRz - 32767) / 65535.0f, 0);
-            }
-
-            // Temp method for testing.
-            if (Input.GetAxis("Vertical") !=0)
-            {
-                AccelerateRate = maxTorque * Input.GetAxis("Vertical");
-            }
-
-            if(Input.GetAxis("Horizontal") != 0)
-            {
-                TurnRate = maxAngle * Input.GetAxis("Horizontal"); 
             }
 
         }
@@ -117,14 +109,12 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     void FixedUpdate()
     {
-
-
         foreach (WheelCollider wheel in wheels)
         {
             // a simple car where front wheels steer while rear ones drive
             // localPosition is used to judge if it is front wheel or back wheel.
             if (wheel.transform.localPosition.z > 0)
-                wheel.steerAngle = TurnRate;
+                wheel.steerAngle = TurnRate * maxAngle;
 
             // Only back wheels will accelerate.
             if (wheel.transform.localPosition.z < 0)
@@ -180,9 +170,10 @@ public class RearWheelDriveShow : MonoBehaviour {
     }
 
     // angle.  Negative means turn left, positive means turn right.
-    public void OnTurn(float angle)
+    public void OnTurn(float rate)
     {
-        TurnRate = angle;
+        TruckControlScript.OnTurnSteerWheel(rate);
+        TurnRate = rate;
     }
 
 }

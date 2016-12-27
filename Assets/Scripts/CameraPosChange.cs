@@ -5,6 +5,8 @@ using UnityEngine;
 // © By Eadmond, 12.19.2016
 // Used to adjust the position of the camera.
 
+// This script is accessed by TruckControl script.
+
 public class CameraPosChange : MonoBehaviour {
 
     // Used to change the distance camera moves.
@@ -48,5 +50,10 @@ public class CameraPosChange : MonoBehaviour {
         {
             transform.Translate(DeltaDistance, 0, 0);
         }
+    }
+
+    public void OnMoveCamera(float x, float y, float z)
+    {
+        transform.Translate(x, y, z);
     }
 }
