@@ -1,73 +1,73 @@
 fileFormatVersion: 2
-guid: 3638dcf7ea7f1f548bd2aabe86b93a81
-timeCreated: 1482729902
+guid: 7667919fe1defe641bbbf02873cd357d
+timeCreated: 1482796586
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: Body
     100002: Exhaust Pipe
-    100004: LeftBackTires1
-    100006: LeftBackTires2
-    100008: LeftFrontWheel
-    100010: RightBackTires1
-    100012: RightBackTires2
-    100014: RightFrontWheel
-    100016: //RootNode
-    100018: Joint
-    100020: LeftBar
-    100022: LeftWiperBlade
-    100024: LeftWiperBody
-    100026: RightBar
-    100028: RightWiperBlade
-    100030: RightWiperBody
-    100032: SteeringWheel
+    100004: Joint
+    100006: LeftBackTires1
+    100008: LeftBackTires2
+    100010: LeftBar
+    100012: LeftFrontWheel
+    100014: LeftWiperBlade
+    100016: LeftWiperBody
+    100018: RightBackTires1
+    100020: RightBackTires2
+    100022: RightBar
+    100024: RightFrontWheel
+    100026: RightWiperBlade
+    100028: RightWiperBody
+    100030: SteeringWheel
+    100032: //RootNode
     400000: Body
     400002: Exhaust Pipe
-    400004: LeftBackTires1
-    400006: LeftBackTires2
-    400008: LeftFrontWheel
-    400010: RightBackTires1
-    400012: RightBackTires2
-    400014: RightFrontWheel
-    400016: //RootNode
-    400018: Joint
-    400020: LeftBar
-    400022: LeftWiperBlade
-    400024: LeftWiperBody
-    400026: RightBar
-    400028: RightWiperBlade
-    400030: RightWiperBody
-    400032: SteeringWheel
+    400004: Joint
+    400006: LeftBackTires1
+    400008: LeftBackTires2
+    400010: LeftBar
+    400012: LeftFrontWheel
+    400014: LeftWiperBlade
+    400016: LeftWiperBody
+    400018: RightBackTires1
+    400020: RightBackTires2
+    400022: RightBar
+    400024: RightFrontWheel
+    400026: RightWiperBlade
+    400028: RightWiperBody
+    400030: SteeringWheel
+    400032: //RootNode
     2300000: Body
     2300002: Exhaust Pipe
-    2300004: LeftBackTires1
-    2300006: LeftBackTires2
-    2300008: LeftFrontWheel
-    2300010: RightBackTires1
-    2300012: RightBackTires2
-    2300014: RightFrontWheel
-    2300016: Joint
-    2300018: LeftBar
-    2300020: LeftWiperBlade
-    2300022: LeftWiperBody
-    2300024: RightBar
+    2300004: Joint
+    2300006: LeftBackTires1
+    2300008: LeftBackTires2
+    2300010: LeftBar
+    2300012: LeftFrontWheel
+    2300014: LeftWiperBlade
+    2300016: LeftWiperBody
+    2300018: RightBackTires1
+    2300020: RightBackTires2
+    2300022: RightBar
+    2300024: RightFrontWheel
     2300026: RightWiperBlade
     2300028: RightWiperBody
     2300030: SteeringWheel
     3300000: Body
     3300002: Exhaust Pipe
-    3300004: LeftBackTires1
-    3300006: LeftBackTires2
-    3300008: LeftFrontWheel
-    3300010: RightBackTires1
-    3300012: RightBackTires2
-    3300014: RightFrontWheel
-    3300016: Joint
-    3300018: LeftBar
-    3300020: LeftWiperBlade
-    3300022: LeftWiperBody
-    3300024: RightBar
+    3300004: Joint
+    3300006: LeftBackTires1
+    3300008: LeftBackTires2
+    3300010: LeftBar
+    3300012: LeftFrontWheel
+    3300014: LeftWiperBlade
+    3300016: LeftWiperBody
+    3300018: RightBackTires1
+    3300020: RightBackTires2
+    3300022: RightBar
+    3300024: RightFrontWheel
     3300026: RightWiperBlade
     3300028: RightWiperBody
     3300030: SteeringWheel

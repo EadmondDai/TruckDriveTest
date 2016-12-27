@@ -17,8 +17,18 @@ public class TruckControl : MonoBehaviour {
     public float WheelRotationRate;
     public float MaxWheelAngle = 90;
 
-	// Use this for initialization
-	void Start () {
+
+    // Related to turnning light.
+    public float DefaultLightChangeInterval = 0.5f;
+    public float NextLightChangeInterval = 0;
+    public bool LeftTurnLightOn = false;
+    public GameObject LeftTurnLightGroup;
+
+    public bool RightTurnLightOn = false;
+    public GameObject RightTurnLightGroup;
+
+    // Use this for initialization
+    void Start () {
         Debug.Log(LogitechGSDK.LogiSteeringInitialize(false));
     }
 
@@ -30,6 +40,8 @@ public class TruckControl : MonoBehaviour {
             // 
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
             rec = LogitechGSDK.LogiGetStateUnity(0);
+
+            NextLightChangeInterval -= Time.deltaTime;
 
             for (int i = 0; i < 128; i++)
             {
@@ -62,12 +74,16 @@ public class TruckControl : MonoBehaviour {
                     }
 
                     // Turnning light.
-                    if(i == 4) // Right turn.
+                    if(NextLightChangeInterval <=0)
                     {
-                        
-                    }else if(i == 5) // Left turn.
-                    {
-                        
+                        if (i == 4) // Right turn.
+                        {
+                            OnTurnRight();
+                        }
+                        else if (i == 5) // Left turn.
+                        {
+                            OnTurnLeft();
+                        }
                     }
                 }
             }
@@ -87,6 +103,10 @@ public class TruckControl : MonoBehaviour {
     {
         // Rotate the SteerWheel 
         SteelWheelTransObj.eulerAngles = new Vector3(45, 0, -WheelRotationRate* MaxWheelAngle);
+
+        RightTurnLightGroup.SetActive(RightTurnLightOn);
+
+        LeftTurnLightGroup.SetActive(LeftTurnLightOn);
     }
 
     public void OnTurnSteerWheel(float rate)
@@ -94,13 +114,23 @@ public class TruckControl : MonoBehaviour {
         WheelRotationRate = rate;
     }
 
-    public void OnTurnLeft(bool LightOn)
+    public void OnTurnLeft()
     {
+        if (RightTurnLightOn)
+            RightTurnLightOn = !RightTurnLightOn;
 
+        LeftTurnLightOn = !LeftTurnLightOn;
+
+        NextLightChangeInterval = DefaultLightChangeInterval;
     }
 
-    public void OnTurnRight(bool LightOn)
+    public void OnTurnRight()
     {
+        if (LeftTurnLightOn)
+            LeftTurnLightOn = !LeftTurnLightOn;
 
+        RightTurnLightOn = !RightTurnLightOn;
+
+        NextLightChangeInterval = DefaultLightChangeInterval;
     }
 }
