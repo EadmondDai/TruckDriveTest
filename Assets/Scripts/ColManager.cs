@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColManager : MonoBehaviour
 {
@@ -41,10 +42,12 @@ public class ColManager : MonoBehaviour
         // show fail info
         UICanvas.Singleton.showInstruction("You hit the curb! Failed!");
         //TODO: redo current stage
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void onPlayerHitWall()
     {
         UICanvas.Singleton.showInstruction("You hit the wall! Failed!");
         //TODO: redo current stage
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
