@@ -29,6 +29,12 @@ public class TruckControl : MonoBehaviour {
     public bool RightTurnLightOn = false;
     public GameObject RightTurnLightGroup;
 
+    public bool IsOnBrake = false;
+    public GameObject BrakeLightGroup;
+
+    public bool IsOnReverse = false;
+    public GameObject ReverseLightGroup;
+
     // Use this for initialization
     void Start () {
         Debug.Log(LogitechGSDK.LogiSteeringInitialize(false));
@@ -135,7 +141,9 @@ public class TruckControl : MonoBehaviour {
             LeftTurnLightGroup.SetActive(false);
         }
 
-        
+        BrakeLightGroup.SetActive(IsOnBrake);
+
+        ReverseLightGroup.SetActive(IsOnReverse);
     }
 
     public void OnTurnSteerWheel(float rate)
@@ -163,5 +171,15 @@ public class TruckControl : MonoBehaviour {
 
         NextLightBlinkInterval = 0;
         NextLightChangeInterval = DefaultLightChangeInterval;
+    }
+
+    public void OnBrake(bool isBrake)
+    {
+        IsOnBrake = isBrake;
+    }
+
+    public void OnReverse(bool isReverse)
+    {
+        IsOnReverse = isReverse;
     }
 }

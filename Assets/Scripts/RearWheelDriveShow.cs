@@ -87,10 +87,12 @@ public class RearWheelDriveShow : MonoBehaviour {
             Vector3 localVel = transform.InverseTransformDirection(velocity);
             if (localVel.z > 0.01)
             {
-                OnBrake(-(rec.lRz - 32767) / 65535.0f);
+                float brakeRate = -(rec.lRz - 32767) / 65535.0f;
+                OnBrake(brakeRate);
             }
             else
             {
+                float reverseRate = -(rec.lRz - 32767) / 65535.0f;
                 OnReverse(-(rec.lRz - 32767) / 65535.0f, 0);
             }
 
@@ -109,6 +111,9 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     void FixedUpdate()
     {
+        TruckControlScript.OnBrake(BrakeRate > 0.1f);
+        TruckControlScript.OnReverse(ReverseRate > 0.1f);
+
         foreach (WheelCollider wheel in wheels)
         {
             // a simple car where front wheels steer while rear ones drive
