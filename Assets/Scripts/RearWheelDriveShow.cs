@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 // © By Eadmond, 12.17.2016
 // This script controls the wheels of the truck.
@@ -50,6 +51,10 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     public TruckControl TruckControlScript;
 
+    // Related to speed.
+    public float CarSpeed;
+    public Text SpeedText;
+
     // here we find all the WheelColliders down in the hierarchy
     void Start()
 	{
@@ -85,7 +90,9 @@ public class RearWheelDriveShow : MonoBehaviour {
             // Need to know if the car is moving forward or moving backward.
             Vector3 velocity = TruckRigidBody.velocity;
             Vector3 localVel = transform.InverseTransformDirection(velocity);
-            if (localVel.z > 0.01)
+            CarSpeed = localVel.z;
+            SpeedText.text = ((int)CarSpeed).ToString() + " m / h";
+            if (CarSpeed > 0.01)
             {
                 float brakeRate = -(rec.lRz - 32767) / 65535.0f;
                 OnBrake(brakeRate);
