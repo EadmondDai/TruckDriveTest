@@ -17,7 +17,6 @@ public class TruckControl : MonoBehaviour {
     public float WheelRotationRate;
     public float MaxWheelAngle = 90;
 
-
     // Related to turnning light.
     public float DefaultLightChangeInterval = 0.5f;
     public float NextLightChangeInterval = 0;
