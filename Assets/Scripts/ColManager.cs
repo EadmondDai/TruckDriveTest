@@ -16,9 +16,7 @@ public class ColManager : MonoBehaviour
     bool objectiveDone = false;
     // stages
     string[] stageNames = new string[] { "Maps1_1", "Maps1_2" };
-
     // funcs
-
     // Player In Area --> Next Stage
     public void onPlayerInArea(bool isHead)
     {
@@ -36,7 +34,7 @@ public class ColManager : MonoBehaviour
             // show info
             UICanvas.Singleton.showInstruction("Successful! Next Stage!");
             // next stage
-            nextStage();            
+            nextStage();
         }
     }
 
