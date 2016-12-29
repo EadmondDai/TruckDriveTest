@@ -15,7 +15,7 @@ public class ColManager : MonoBehaviour
     bool trailerInArea = false;
     bool objectiveDone = false;
     // stages
-    string[] stageNames = new string[] { "Maps1_1", "Maps1_2" };
+    string[] stageNames = new string[] { "Maps1_1", "Maps1_2", "Maps1_3", "Maps1_4", "Maps1_5" };
     // funcs
     // Player In Area --> Next Stage
     public void onPlayerInArea(bool isHead)
@@ -63,6 +63,7 @@ public class ColManager : MonoBehaviour
         for (; i < stageNames.Length; i++)
             if (stageNames[i] == curName)
                 break;
+        i += 1;
         if (i >= stageNames.Length)
             i = 0;
         SceneManager.LoadScene(stageNames[i], LoadSceneMode.Single);

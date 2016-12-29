@@ -28828,6 +28828,11 @@ Prefab:
       propertyPath: TrailerLeftTurnLightGroup
       value: 
       objectReference: {fileID: 925253995}
+    - target: {fileID: 114139282997025394, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: maxAngle
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 59197186282076624, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
