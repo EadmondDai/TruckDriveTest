@@ -3936,7 +3936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ffd3a9c999ede4b99fefd7189a0ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 30
+  maxAngle: 45
   maxTorque: 2250.9
   CarModel: {fileID: 4782826189462732}
   FrictionRate: 0.7
@@ -4020,8 +4020,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.46
   m_SuspensionSpring:
-    spring: 167069.62
-    damper: 26731.14
+    spring: 167069.67
+    damper: 26731.146
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.2171578
@@ -4049,8 +4049,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.46
   m_SuspensionSpring:
-    spring: 167005.56
-    damper: 26720.89
+    spring: 167005.69
+    damper: 26720.91
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.2171578
@@ -4078,8 +4078,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.46
   m_SuspensionSpring:
-    spring: 98907.37
-    damper: 15825.18
+    spring: 98907.336
+    damper: 15825.174
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 1.2171578
@@ -4108,9 +4108,9 @@ WheelCollider:
   m_Radius: 0.46
   m_SuspensionSpring:
     spring: 482574.28
-    damper: 77211.89
+    damper: 77211.88
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620003
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.2171581
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -4137,9 +4137,9 @@ WheelCollider:
   m_Radius: 0.46
   m_SuspensionSpring:
     spring: 482499.9
-    damper: 77199.99
+    damper: 77199.984
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 1.2171583
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -4165,10 +4165,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.46
   m_SuspensionSpring:
-    spring: 98843.21
-    damper: 15814.914
+    spring: 98843.195
+    damper: 15814.911
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620001
+  m_SuspensionDistance: 0.1962
   m_ForceAppPointDistance: 1.2171578
   m_Mass: 20
   m_WheelDampingRate: 0.25
