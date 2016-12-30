@@ -53,7 +53,15 @@ public class RearWheelDriveShow : MonoBehaviour {
 
     // Related to speed.
     public float CarSpeed;
+    public float CarSpeedShowFacotr = 3;
     public Text SpeedText;
+    public float MaxOutPutStartToDecreaseSpeed = 20; // Mile / Hour
+    // lose all the effecience on speed 40 m/h.
+
+    // Default velocity of unity is m/s
+    // 1m = 0.000621371 miles
+    // 1 h = 3600 seconds.
+    // 
 
     // here we find all the WheelColliders down in the hierarchy
     void Start()
@@ -81,16 +89,13 @@ public class RearWheelDriveShow : MonoBehaviour {
             float horizontalMoveRate = rec.lX / 32768.0f;
             float minusVertical = -(rec.lRz - 32767) / (65535.0f);
 
-            float angle = maxAngle * horizontalMoveRate * deltaTime;
-            float torque = maxTorque * (verticalMove - minusVertical) * deltaTime;
-
             OnAccel(verticalMove, 0);
             OnTurn(horizontalMoveRate);
 
             // Need to know if the car is moving forward or moving backward.
             Vector3 velocity = TruckRigidBody.velocity;
             Vector3 localVel = transform.InverseTransformDirection(velocity);
-            CarSpeed = localVel.z;
+            CarSpeed = localVel.z / 0.000621371f / 3600.0f * CarSpeedShowFacotr;
             SpeedText.text = ((int)CarSpeed).ToString() + " m / h";
             if (CarSpeed > 0.01)
             {
@@ -132,7 +137,21 @@ public class RearWheelDriveShow : MonoBehaviour {
             if (wheel.transform.localPosition.z < 0)
             {
                 if (AccelerateRate > 0.1f)
+                {
+                    // Change the torque on the wheel according to the carspeed.
+                    // Change the torque by change the effecienceremian.
+                    if(CarSpeed <= MaxOutPutStartToDecreaseSpeed)
+                    {
+                        EffecieceRemain = 1;
+                    }
+                    else
+                    {
+                        //1.0f / 40 - MaxOutPutStartToDecreaseSpeed; // Effecience decreace per 1 m/h increase.
+                        EffecieceRemain = 1.0f - (CarSpeed - MaxOutPutStartToDecreaseSpeed) * (1.0f / (40 - MaxOutPutStartToDecreaseSpeed));
+                    }
+
                     wheel.motorTorque = AccelerateRate * maxTorque * EngineSpinToTireRate * EffecieceRemain / 4;
+                }
 
                 if (BrakeRate > 0.1f || ReverseRate > 0.1f)
                 {

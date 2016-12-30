@@ -704,8 +704,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864566042729420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.86, y: 0.32, z: 3.32}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalPosition: {x: 1.86, y: 0.32, z: 6.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4718116465468084}
   - {fileID: 4039443694446020}
@@ -1133,8 +1133,8 @@ Rigidbody:
   m_GameObject: {fileID: 1864566042729420}
   serializedVersion: 2
   m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 10
+  m_Drag: 0.1
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1150,7 +1150,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.87, z: 4.26}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -1.3728793, z: -0.19592309}
+  m_ConnectedAnchor: {x: 0, y: -1.3728793, z: -0.028998613}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1662,7 +1662,7 @@ WheelCollider:
     damper: 400
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
-  m_ForceAppPointDistance: 2.7361825
+  m_ForceAppPointDistance: 2.1481826
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1691,7 +1691,7 @@ WheelCollider:
     damper: 400
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
-  m_ForceAppPointDistance: 2.7361825
+  m_ForceAppPointDistance: 2.1481826
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1720,7 +1720,7 @@ WheelCollider:
     damper: 400
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
-  m_ForceAppPointDistance: 2.7361825
+  m_ForceAppPointDistance: 2.1481826
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -1749,7 +1749,7 @@ WheelCollider:
     damper: 400
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620001
-  m_ForceAppPointDistance: 2.7361825
+  m_ForceAppPointDistance: 2.1481826
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
