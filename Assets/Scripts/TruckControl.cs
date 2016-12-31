@@ -104,12 +104,11 @@ public class TruckControl : MonoBehaviour {
         }
         else if (!LogitechGSDK.LogiIsConnected(0))
         {
-            Debug.Log("PLEASE PLUG IN A STEERING WHEEL OR A FORCE FEEDBACK CONTROLLER");
+            // Here is the control plan for keyboard.
+            // But changing direction is sitll on camera script.
+
         }
-        else
-        {
-            Debug.Log("THIS WINDOW NEEDS TO BE IN FOREGROUND IN ORDER FOR THE SDK TO WORK PROPERLY");
-        }
+
     }
 
     void FixedUpdate()

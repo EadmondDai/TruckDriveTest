@@ -122,10 +122,6 @@ public class TruckDrive : MonoBehaviour {
         }
         else if (!LogitechGSDK.LogiIsConnected(0))
         {
-            Debug.Log("PLEASE PLUG IN A STEERING WHEEL OR A FORCE FEEDBACK CONTROLLER");
-        }
-        else
-        {
             // Using Keyboard.
             // pass the input to the car!
             float h = Input.GetAxis("Horizontal");
@@ -133,7 +129,6 @@ public class TruckDrive : MonoBehaviour {
             //float handbrake = Input.GetAxis("Jump");
             CarControlScript.Move(h, v, v, 0.0f);
         }
-
     }
 
 

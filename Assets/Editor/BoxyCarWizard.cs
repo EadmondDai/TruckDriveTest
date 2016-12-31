@@ -55,7 +55,7 @@ class BoxyCarWizard : EditorWindow {
 			rightWheel.transform.localPosition = new Vector3 (axleWidth / 2, axleShift, firstOffset - axleStep * i);
 		}
 
-		root.AddComponent<EasySuspension>();
-		root.AddComponent<RearWheelDrive>();
+		//root.AddComponent<EasySuspension>();
+		//root.AddComponent<RearWheelDrive>();
 	}
 }
