@@ -4244,9 +4244,9 @@ MonoBehaviour:
   m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
   m_SpeedType: 0
-  m_Topspeed: 150
+  m_Topspeed: 30
   m_RevRangeBoundary: 1
-  m_SlipLimit: 0.3
+  m_SlipLimit: 2.5
   m_BrakeTorque: 20000
   SpeedText: {fileID: 114493965049772444}
 --- !u!114 &114250346417121426
