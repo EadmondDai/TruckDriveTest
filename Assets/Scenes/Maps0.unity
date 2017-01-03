@@ -1177,18 +1177,7 @@ Prefab:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 835625871}
-    - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 54988086221781842, guid: aaaa8e57f74fe2648897a039a9284434,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 64
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114587055257592838, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
-    - {fileID: 114159802540304676, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &770045577
@@ -1678,11 +1667,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66c7443b08d648946957cb40ffab1f07, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1258928258 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4972976636214144, guid: aaaa8e57f74fe2648897a039a9284434,
-    type: 2}
-  m_PrefabInternal: {fileID: 724053057}
 --- !u!1001 &1284534239
 Prefab:
   m_ObjectHideFlags: 0
@@ -2472,22 +2456,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66c7443b08d648946957cb40ffab1f07, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2053511265 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434,
-    type: 2}
-  m_PrefabInternal: {fileID: 724053057}
---- !u!114 &2053511266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2053511265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1991ce5ac82795b41b4edd3ff7c8738d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAngle: 30
-  maxTorque: 300
-  CarModel: {fileID: 1258928258}
