@@ -77,13 +77,17 @@ namespace VRStandardAssets.Utils
 
                 // If we hit an interactive item and it's not the same as the last interactive item, then call Over
                 if (interactible && interactible != m_LastInteractible)
-                    interactible.Over(); 
-
+                {
+                    interactible.Over();
+                    Debug.Log(interactible.name);
+                }
+                   
                 // Deactive the last interactive item 
                 if (interactible != m_LastInteractible)
                     DeactiveLastInteractible();
 
                 m_LastInteractible = interactible;
+               
 
                 // Something was hit, set at the hit position.
                 if (m_Reticle)
