@@ -6,6 +6,7 @@ using UnityEngine.UI;
 // This scipt handles how the car behave.
 
 // This script is accessed by RearWheelDriveShow script.
+// This script is resionsiable for showing the speed.
 
 namespace UnityStandardAssets.Vehicles.Car
 {
