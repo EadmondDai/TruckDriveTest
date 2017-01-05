@@ -165,6 +165,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22963622}
+--- !u!1 &48265272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 48265273}
+  - component: {fileID: 48265274}
+  m_Layer: 0
+  m_Name: ManeuverManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &48265273
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48265272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &48265274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48265272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b45e511e70d82346a87ab222003f423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ErrorMassagerScript: {fileID: 240934315}
+  TruckControlScript: {fileID: 240934313}
+  CameraGazeScript: {fileID: 240934314}
 --- !u!1001 &52599958
 Prefab:
   m_ObjectHideFlags: 0
@@ -4814,6 +4857,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 240934311}
   m_Script: {fileID: 11500000, guid: 6631ec1d1f5f524499917957fa53a551, type: 3}
+--- !u!114 &240934314 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114158638526963874, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 240934311}
+  m_Script: {fileID: 11500000, guid: 5dd57e8d81bc16345a0725cad53a17d8, type: 3}
+--- !u!114 &240934315 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293487876697466, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 240934311}
+  m_Script: {fileID: 11500000, guid: 7676253ecbe1cb54d8f1f4308ce7ebd5, type: 3}
 --- !u!1001 &243615284
 Prefab:
   m_ObjectHideFlags: 0
