@@ -27,7 +27,7 @@ public class ColManager : MonoBehaviour
             headInArea = true;
         else
             trailerInArea = true;
-        if(headInArea && trailerInArea)
+        if(currentLevel()==1 && headInArea || headInArea && trailerInArea)
         {
             objectiveDone = true;
             Debug.LogWarning("GameObject achieved!");
@@ -51,6 +51,17 @@ public class ColManager : MonoBehaviour
         UICanvas.Singleton.showInstruction("You hit the wall! Failed!");
         // redo current stage
         reloadStage();
+    }
+    // level is 1 or 2, stage is the number after level.
+    // e.g. for 1-2, level is 1 and stage is 2.
+    int currentLevel()
+    {
+        string name = SceneManager.GetActiveScene().name;
+        for (int i = 0; i < name.Length; i++)
+            if (name[i] >= '1' && name[i] <= '9')
+                return name[i] - '0';
+        Debug.Assert(false,"ColManager.currentLevel(): can NOT find level number.");
+        return -1;
     }
     void reloadStage()
     {
