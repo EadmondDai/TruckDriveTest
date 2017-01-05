@@ -193,4 +193,12 @@ public class TruckControl : MonoBehaviour {
     {
         IsOnReverse = isReverse;
     }
+
+    public void ResetLight()
+    {
+        LeftTurnLightOn = false;
+        RightTurnLightOn = false;
+        IsOnBrake = false;
+        IsOnReverse = false;
+    }
 }

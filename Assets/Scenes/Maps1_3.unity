@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -15600,6 +15600,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: IsTrailerConnected
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
@@ -15608,6 +15613,12 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54216132039971086, guid: d3eb83b3a39a4944d92050f2f29687ba,
     type: 2}
   m_PrefabInternal: {fileID: 934220209}
+--- !u!114 &934220211 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 934220209}
+  m_Script: {fileID: 11500000, guid: 6631ec1d1f5f524499917957fa53a551, type: 3}
 --- !u!1001 &939107036
 Prefab:
   m_ObjectHideFlags: 0
@@ -30739,6 +30750,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114096236944597174, guid: af120e8e2d1e89840802813dba062b9a,
+        type: 2}
+      propertyPath: TruckControlScript
+      value: 
+      objectReference: {fileID: 934220211}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af120e8e2d1e89840802813dba062b9a, type: 2}
   m_IsPrefabParent: 0
@@ -31397,6 +31413,10 @@ Prefab:
     - target: {fileID: 4456504103339804, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}

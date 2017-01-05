@@ -11019,6 +11019,10 @@ Prefab:
       propertyPath: m_ConnectedAnchor.x
       value: -0.5100002
       objectReference: {fileID: 0}
+    - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
   m_IsPrefabParent: 0
@@ -17848,6 +17852,11 @@ Prefab:
       propertyPath: m_anchorWorldRotation.z
       value: 73.615036
       objectReference: {fileID: 0}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: IsTrailerConnected
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
@@ -17856,6 +17865,12 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 54216132039971086, guid: d3eb83b3a39a4944d92050f2f29687ba,
     type: 2}
   m_PrefabInternal: {fileID: 1218035345}
+--- !u!114 &1218035347 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1218035345}
+  m_Script: {fileID: 11500000, guid: 6631ec1d1f5f524499917957fa53a551, type: 3}
 --- !u!1001 &1235694100
 Prefab:
   m_ObjectHideFlags: 0
@@ -30617,6 +30632,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114096236944597174, guid: af120e8e2d1e89840802813dba062b9a,
+        type: 2}
+      propertyPath: TruckControlScript
+      value: 
+      objectReference: {fileID: 1218035347}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af120e8e2d1e89840802813dba062b9a, type: 2}
   m_IsPrefabParent: 0

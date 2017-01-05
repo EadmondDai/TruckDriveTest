@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// This script access truck control script.
+
 public class ColManager : MonoBehaviour
 {
     // for singleton
@@ -14,9 +16,14 @@ public class ColManager : MonoBehaviour
     bool headInArea = false;
     bool trailerInArea = false;
     bool objectiveDone = false;
+
     // stages
     string[] stageNames = new string[] { "Maps1_1", "Maps1_2", "Maps1_3", "Maps1_4", "Maps1_5" };
     // funcs
+
+
+    public TruckControl TruckControlScript;
+
     // Player In Area --> Next Stage
     public void onPlayerInArea(bool isHead)
     {
@@ -65,10 +72,16 @@ public class ColManager : MonoBehaviour
     }
     void reloadStage()
     {
+        // Before restart the scene, reset the light of the truck.
+        TruckControlScript.ResetLight();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
     void nextStage()
     {
+        // Before load the scene, reset the light of the truck.
+        TruckControlScript.ResetLight();
+
         string curName = SceneManager.GetActiveScene().name;
         int i = 0;
         for (; i < stageNames.Length; i++)
