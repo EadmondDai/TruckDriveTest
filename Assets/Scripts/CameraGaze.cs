@@ -6,6 +6,8 @@ using VRStandardAssets.Utils;
 // © By Eadmond, 1.2.2017
 // This script is used to check if the driver have checked each side when making the turn.
 
+// This script access ErrorMassage script.
+
 public class CameraGaze : MonoBehaviour {
 
     // These are the diections need to be checked.

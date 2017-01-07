@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // This script access truck control script.
+// This script access ErrorMassage script.
 
 public class ColManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ColManager : MonoBehaviour
 
 
     public TruckControl TruckControlScript;
+    public ErrorMassage ErrorMassageScript;
 
     // Player In Area --> Next Stage
     public void onPlayerInArea(bool isHead)
@@ -40,6 +42,8 @@ public class ColManager : MonoBehaviour
             Debug.LogWarning("GameObject achieved!");
             // show info
             UICanvas.Singleton.showInstruction("Successful! Next Stage!");
+
+            ErrorMassageScript.Success();
             // next stage
             nextStage();
         }
@@ -48,14 +52,22 @@ public class ColManager : MonoBehaviour
     // Player Hit Curb --> Redo Current Stage
     public void onPlayerHitCurb()
     {
-        // show fail info
+        // show fail info in not vr Mode.
         UICanvas.Singleton.showInstruction("You hit the curb! Failed!");
+
+        // show fail info in VR mode.
+        ErrorMassageScript.YouHitTheCurb();
+
         // redo current stage
         reloadStage();
     }
     public void onPlayerHitWall()
     {
+       
         UICanvas.Singleton.showInstruction("You hit the wall! Failed!");
+
+        ErrorMassageScript.HitTheWall();
+
         // redo current stage
         reloadStage();
     }

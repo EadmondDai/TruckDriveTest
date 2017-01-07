@@ -11,6 +11,9 @@ public class ErrorMassage : MonoBehaviour {
     public Text ErrorText;
     private string ShowingString = "This is only for test now.";
 
+    public float DefaultShowTime = 5;
+    public float ShowTimeLeft = 0;
+
 	// Use this for initialization
 	void Start () {
         Reset();
@@ -18,13 +21,15 @@ public class ErrorMassage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        ShowTimeLeft -= Time.deltaTime;
+        if (ShowTimeLeft < 0)
+            Reset();
 	}
 
     public void Reset()
     {
         ShowingString = "";
-        ShowText();
+        ErrorText.text = ShowingString;
     }
 
     public void DidNotCheckLeftWindow()
@@ -81,8 +86,45 @@ public class ErrorMassage : MonoBehaviour {
         ShowText();
     }
 
+    public void HitTheWall()
+    {
+        ShowingString = "You hitted the wall!";
+        ShowText();
+    }
+
+    public void Success()
+    {
+        ShowingString = "Good job!";
+        ShowText();
+    }
+
+    public void CheckLeftWindow()
+    {
+        ShowingString = "You checked the left window!";
+        ShowText();
+    }
+
+    public void CheckLeftMirror()
+    {
+        ShowingString = "You checked the left mirror!";
+        ShowText();
+    }
+
+    public void CheckRightWindow()
+    {
+        ShowingString = "You checked the right window!";
+        ShowText();
+    }
+
+    public void CheckRightMirror()
+    {
+        ShowingString = "You checked the right mirror!";
+        ShowText();
+    }
+
     void ShowText()
     {
         ErrorText.text = ShowingString;
+        ShowTimeLeft = DefaultShowTime;
     }
 }
