@@ -122,6 +122,49 @@ public class ErrorMassage : MonoBehaviour {
         ShowText();
     }
 
+    public void BeforeMakeRightTurn()
+    {
+        ShowingString = "You are about to make a right turn, slow down and check left window!";
+        ShowText();
+    }
+
+    public void DuringRightTurn()
+    {
+        ShowingString = "Check around you, and be slow!";
+        ShowText();
+    }
+
+    public void LeavingRightTurn()
+    {
+        ShowingString = "Check right mirror and careful with the trailer!";
+        ShowText();
+    }
+
+    public void BeforeMakeLeftTurn()
+    {
+        ShowingString = "You are about to make a left turn, slow down and check left window!";
+        ShowText();
+    }
+
+    public void DuringLeftTurn()
+    {
+        ShowingString = "Check around you, and be slow!";
+        ShowText();
+    }
+
+    public void LeavingLeftTurn()
+    {
+        ShowingString = "Check left mirror and careful with the trailer!";
+        ShowText();
+    }
+
+    public void BeforeTrafficLight()
+    {
+        ShowingString = "Traffic light ahead, control speed!";
+        ShowText();
+    }
+
+
     void ShowText()
     {
         ErrorText.text = ShowingString;

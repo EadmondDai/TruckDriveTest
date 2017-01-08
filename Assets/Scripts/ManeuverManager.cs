@@ -11,6 +11,17 @@ using UnityEngine;
 
 public class ManeuverManager : MonoBehaviour {
 
+    public bool IsEnterRightTurn;
+    public bool IsDuringRightTurn;
+    public bool IsLeavingRightTurn;
+
+    public bool IsEnterLeftTurn;
+    public bool IsDuringLeftTurn;
+    public bool IsLeavingLeftTurn;
+
+    public bool IsTrafficLight;
+    public bool IsStop;
+
     // This is used to show the massager, all the dynamic massage should be in the script.
     public ErrorMassage ErrorMassagerScript;
 
@@ -29,6 +40,52 @@ public class ManeuverManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "Player")
+        {
+            if(IsTrafficLight)
+            {
+                ErrorMassagerScript.BeforeTrafficLight();
+            }
+
+            if(IsStop)
+            {
+
+            }
+
+            if(IsEnterRightTurn)
+            {
+                ErrorMassagerScript.BeforeMakeRightTurn();
+            }
+
+            if(IsDuringRightTurn)
+            {
+                ErrorMassagerScript.DuringRightTurn();
+            }
+
+            if(IsLeavingRightTurn)
+            {
+                ErrorMassagerScript.LeavingRightTurn();
+            }
+
+            if(IsEnterLeftTurn)
+            {
+                ErrorMassagerScript.BeforeMakeLeftTurn();
+            }
+
+            if(IsDuringLeftTurn)
+            {
+                ErrorMassagerScript.DuringLeftTurn();
+            }
+               
+            if(IsLeavingLeftTurn)
+            {
+                ErrorMassagerScript.LeavingLeftTurn();
+            }
+        }
+    }
 
     public void OnEnterCornerRight()
     {
