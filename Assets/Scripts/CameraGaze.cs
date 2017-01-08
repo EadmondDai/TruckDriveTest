@@ -16,6 +16,8 @@ public class CameraGaze : MonoBehaviour {
     public bool CheckRightWindow = false;
     public bool CheckRightMirror = false;
 
+    public ErrorMassage ErrorMassageScript;
+
     // Use this for initialization
     void Start () {
     }
@@ -29,17 +31,21 @@ public class CameraGaze : MonoBehaviour {
     {
         if(name == "LeftWindow")
         {
+            ErrorMassageScript.CheckLeftWindow();
             CheckLeftWindow = true;
         }else if(name == "LeftMirror")
         {
+            ErrorMassageScript.CheckLeftMirror();
             CheckLeftMirror = true;
         }
         else if (name == "RightMirror")
         {
+            ErrorMassageScript.CheckRightMirror();
             CheckRightMirror = true;
         }
         else if (name == "RightWindow")
         {
+            ErrorMassageScript.CheckRightWindow();
             CheckRightWindow = true;
         }
     }

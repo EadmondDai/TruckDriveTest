@@ -792,6 +792,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33b0821f7f90a0948bae41a94df3614f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &488878650 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293487876697466, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1808355759}
+  m_Script: {fileID: 11500000, guid: 7676253ecbe1cb54d8f1f4308ce7ebd5, type: 3}
 --- !u!1001 &524265909
 Prefab:
   m_ObjectHideFlags: 0
@@ -2328,6 +2334,11 @@ Prefab:
       propertyPath: TrailerBrakeLightGroup
       value: 
       objectReference: {fileID: 701394587}
+    - target: {fileID: 114158638526963874, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: ErrorMassageScript
+      value: 
+      objectReference: {fileID: 488878650}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
