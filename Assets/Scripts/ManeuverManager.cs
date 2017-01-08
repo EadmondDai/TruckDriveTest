@@ -4,6 +4,11 @@ using UnityEngine;
 
 // © By Eadmond, 1.4.2017
 // This script is used to manage the logic part of player maneuver judgement.
+// Each turn is make up with three steps, before, during and leaving the turn.
+// For a truck, before make the turn,should at least check both side.
+// During the turn, should check out side corner.
+// Leaving the turn, should check in side corner and trailer.
+
 
 // This script access ErrorMassager script.
 // This script access TruckControl script.
@@ -52,7 +57,7 @@ public class ManeuverManager : MonoBehaviour {
 
             if(IsStop)
             {
-
+                ErrorMassagerScript.BeforeStopSign();
             }
 
             if(IsEnterRightTurn)

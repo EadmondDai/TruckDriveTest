@@ -163,7 +163,12 @@ public class ErrorMassage : MonoBehaviour {
         ShowingString = "Traffic light ahead, control speed!";
         ShowText();
     }
-
+    
+    public void BeforeStopSign()
+    {
+        ShowingString = "Stop sign ahead!";
+        ShowText();
+    }
 
     void ShowText()
     {
