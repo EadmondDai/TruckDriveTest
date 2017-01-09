@@ -165,57 +165,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22963622}
---- !u!1 &48265272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 48265273}
-  - component: {fileID: 48265274}
-  m_Layer: 0
-  m_Name: ManeuverManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &48265273
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 48265272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &48265274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 48265272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b45e511e70d82346a87ab222003f423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsEnterRightTurn: 0
-  IsDuringRightTurn: 0
-  IsLeavingRightTurn: 0
-  IsEnterLeftTurn: 0
-  IsDuringLeftTurn: 0
-  IsLeavingLeftTurn: 0
-  IsTrafficLight: 0
-  IsStop: 0
-  ErrorMassagerScript: {fileID: 240934315}
-  TruckControlScript: {fileID: 240934313}
-  CameraGazeScript: {fileID: 240934314}
 --- !u!1001 &52599958
 Prefab:
   m_ObjectHideFlags: 0
@@ -4817,6 +4766,11 @@ Prefab:
       propertyPath: TrailerBrakeLightGroup
       value: 
       objectReference: {fileID: 516802776}
+    - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
+        type: 2}
+      propertyPath: IsTrailerConnected
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
   m_IsPrefabParent: 0
@@ -9869,12 +9823,12 @@ Prefab:
     - target: {fileID: 59481034575269394, guid: aaaa8e57f74fe2648897a039a9284434,
         type: 2}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.332819
+      value: -1.3728793
       objectReference: {fileID: 0}
     - target: {fileID: 59481034575269394, guid: aaaa8e57f74fe2648897a039a9284434,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: -2.8699992
+      value: -2.8799994
       objectReference: {fileID: 0}
     - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
       propertyPath: m_IsActive
@@ -24698,7 +24652,7 @@ Transform:
   - {fileID: 1056082820}
   - {fileID: 425406747}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1603346651
 Prefab:
