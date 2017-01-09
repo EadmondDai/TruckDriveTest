@@ -1660,7 +1660,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374862452248668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: 0.32, z: 25.1}
+  m_LocalPosition: {x: 1.86, y: 0.32, z: 12.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4782826189462732}
@@ -3487,7 +3487,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.50999975, y: 0.93600005, z: 0.7399998}
+  m_ConnectedAnchor: {x: 0.5099999, y: 0.93600005, z: 0.7399998}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -5062,14 +5062,14 @@ MonoBehaviour:
   m_SteerHelper: 0.644
   m_TractionControl: 1
   m_FullTorqueOverAllWheels: 10000
-  m_ReverseTorque: 20000
+  m_ReverseTorque: 2500
   m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
   m_SpeedType: 0
   m_Topspeed: 30
   m_RevRangeBoundary: 1
   m_SlipLimit: 2.5
-  m_BrakeTorque: 120000
+  m_BrakeTorque: 2000
   SpeedText: {fileID: 114493965049772444}
 --- !u!114 &114214626254240430
 MonoBehaviour:
@@ -5177,7 +5177,7 @@ MonoBehaviour:
   m_canvasOriginWorldPosition: {x: 2.9565508, y: 1.8581, z: 0.7979413}
   m_canvasOriginWorldRotation: {x: 270.31152, y: 321.57166, z: 40.970303}
   anchorTransform: {fileID: 4945508504198262}
-  m_anchorWorldPosition: {x: 6.928, y: 2.3170035, z: 26.155}
+  m_anchorWorldPosition: {x: 3.388, y: 2.3170035, z: 13.745}
   m_anchorWorldRotation: {x: 270.30902, y: 321.5719, z: 73.61533}
   shouldRender: 1
   stereoCameraHead: {fileID: 1496273703343016}
@@ -5416,7 +5416,7 @@ MonoBehaviour:
   m_canvasOriginWorldPosition: {x: 1.8686883, y: 1.6130681, z: 13.564901}
   m_canvasOriginWorldRotation: {x: 270.30902, y: 321.57135, z: 23.626047}
   anchorTransform: {fileID: 4262250739942720}
-  m_anchorWorldPosition: {x: 4.358, y: 1.6069999, z: 26.516}
+  m_anchorWorldPosition: {x: 0.81799996, y: 1.6069999, z: 14.105999}
   m_anchorWorldRotation: {x: 270.3071, y: 321.5696, z: 15.771535}
   shouldRender: 1
   stereoCameraHead: {fileID: 1367519417168584}

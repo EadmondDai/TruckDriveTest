@@ -116,9 +116,7 @@ public class TruckDrive : MonoBehaviour {
                 TruckControlScript.OnBrake(false);
                 TruckControlScript.OnReverse(false);
             }
-
-
-            CarControlScript.Move(turn, gas, brake, 0);
+            CarControlScript.Move(turn, gas, -brake, 0);
         }
         else if (!LogitechGSDK.LogiIsConnected(0))
         {
