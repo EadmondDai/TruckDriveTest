@@ -6476,7 +6476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 7.72, y: 4.36}
+  m_AnchoredPosition: {x: 7.24, y: 2.87}
   m_SizeDelta: {x: 30, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &345914016
@@ -18084,6 +18084,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1180263651}
   m_Script: {fileID: 11500000, guid: 2bdcb234a5e8a2d42be8300c1a035d6d, type: 3}
+--- !u!114 &1186933690 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293487876697466, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 645258816}
+  m_Script: {fileID: 11500000, guid: 7676253ecbe1cb54d8f1f4308ce7ebd5, type: 3}
 --- !u!1001 &1193202645
 Prefab:
   m_ObjectHideFlags: 0
@@ -31154,6 +31160,11 @@ Prefab:
       propertyPath: TruckControlScript
       value: 
       objectReference: {fileID: 838325247}
+    - target: {fileID: 114096236944597174, guid: af120e8e2d1e89840802813dba062b9a,
+        type: 2}
+      propertyPath: ErrorMassageScript
+      value: 
+      objectReference: {fileID: 1186933690}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af120e8e2d1e89840802813dba062b9a, type: 2}
   m_IsPrefabParent: 0

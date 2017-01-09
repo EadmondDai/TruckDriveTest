@@ -31102,6 +31102,11 @@ Prefab:
       propertyPath: TruckControlScript
       value: 
       objectReference: {fileID: 240934313}
+    - target: {fileID: 114096236944597174, guid: af120e8e2d1e89840802813dba062b9a,
+        type: 2}
+      propertyPath: ErrorMassageScript
+      value: 
+      objectReference: {fileID: 240934315}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af120e8e2d1e89840802813dba062b9a, type: 2}
   m_IsPrefabParent: 0

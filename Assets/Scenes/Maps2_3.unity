@@ -15700,6 +15700,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 934220209}
   m_Script: {fileID: 11500000, guid: 6631ec1d1f5f524499917957fa53a551, type: 3}
+--- !u!114 &934220212 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114293487876697466, guid: d3eb83b3a39a4944d92050f2f29687ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 934220209}
+  m_Script: {fileID: 11500000, guid: 7676253ecbe1cb54d8f1f4308ce7ebd5, type: 3}
 --- !u!1001 &939107036
 Prefab:
   m_ObjectHideFlags: 0
@@ -31050,6 +31056,11 @@ Prefab:
       propertyPath: TruckControlScript
       value: 
       objectReference: {fileID: 934220211}
+    - target: {fileID: 114096236944597174, guid: af120e8e2d1e89840802813dba062b9a,
+        type: 2}
+      propertyPath: ErrorMassageScript
+      value: 
+      objectReference: {fileID: 934220212}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af120e8e2d1e89840802813dba062b9a, type: 2}
   m_IsPrefabParent: 0

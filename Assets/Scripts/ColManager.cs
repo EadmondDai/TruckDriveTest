@@ -19,7 +19,7 @@ public class ColManager : MonoBehaviour
     bool objectiveDone = false;
 
     // stages
-    string[] stageNames = new string[] { "Maps1_1", "Maps1_2", "Maps1_3", "Maps1_4", "Maps1_5" };
+    string[] stageNames = new string[] { "Maps1_1", "Maps1_2", "Maps1_3", "Maps1_4", "Maps2_1", "Maps2_2", "Maps2_3", "Maps2_4", "Maps0"};
     // funcs
 
 

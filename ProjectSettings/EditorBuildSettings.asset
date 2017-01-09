@@ -29,3 +29,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps1_3.unity
   - enabled: 1
     path: Assets/Scenes/Maps1_4.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps2_1.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps2_2.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps2_3.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps2_4.unity
+  - enabled: 1
+    path: Assets/Scenes/Maps0.unity
