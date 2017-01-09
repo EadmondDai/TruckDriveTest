@@ -11004,7 +11004,7 @@ Prefab:
     - target: {fileID: 59481034575269394, guid: aaaa8e57f74fe2648897a039a9284434,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: -2.9100003
+      value: -2.9300025
       objectReference: {fileID: 0}
     - target: {fileID: 4456504103339804, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
       propertyPath: m_LocalScale.x
@@ -11017,11 +11017,11 @@ Prefab:
     - target: {fileID: 59481034575269394, guid: aaaa8e57f74fe2648897a039a9284434,
         type: 2}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.5100002
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 1864566042729420, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaaa8e57f74fe2648897a039a9284434, type: 2}
@@ -14796,7 +14796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You know what, it's time to learn reverse.
+  m_Text: Reverse with a trailer, good luck!
 --- !u!222 &843080525
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18022,7 +18022,7 @@ Prefab:
     - target: {fileID: 114551771248971324, guid: d3eb83b3a39a4944d92050f2f29687ba,
         type: 2}
       propertyPath: IsTrailerConnected
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3eb83b3a39a4944d92050f2f29687ba, type: 2}
